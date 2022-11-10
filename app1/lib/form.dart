@@ -235,7 +235,24 @@ class _MyFormPageState extends State<MyFormPage> {
                                 children: <Widget>[
                                   Center(child: const Text('Informasi Data')),
                                   SizedBox(height: 20),
-                                  Text('Judul: '+ _namaLengkap),
+                                  Center(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text('Judul: $_namaLengkap'),
+                                        if(jenjangSarjana)
+                                          const Text('Jenjang pendidikan: Sarjana'),
+                                        if(jenjangDiploma)
+                                          const Text('Jenjang pendidikan: Sarjana'),
+                                        if(jenjangMagister)
+                                          const Text('Jenjang pendidikan: Sarjana'),
+                                        if(jenjangDoktor)
+                                          const Text('Jenjang pendidikan: Sarjana'),
+                                        Text('Umur: $umur'),
+                                        Text('Kelas PBP: $kelasPBP'),
+                                      ],
+                                    ),
+                                  ),
                                   TextButton(
                                     onPressed: () {
                                       Navigator.pop(context);
